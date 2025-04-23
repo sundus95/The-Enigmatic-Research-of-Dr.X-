@@ -1,0 +1,18 @@
+All required libraries:
+Section 1: Reading the Publications & Section 2: Breaking Down the Publications
+pip install docx2txt pandas PyPDF2 tiktoken
+
+Section 3: Building a Vector Database
+Python 3.10.17    
+pip install pandas faiss-cpu nomic openpyxl tqdm sentence-transformers einops
+
+Section 4: Creating a RAG Q&A System
+pip install pandas numpy openpyxl faiss-cpu sentence-transformers nomic llama-cpp-python tqdm
+
+Section 5: Translating the publications
+pip install nltk transformers PyPDF2 python-docx pandas
+
+Section 6: Finding the Main Ideas
+pip install transformers PyPDF2 nltk pandas rouge-score sumy spacy PyMuPDF python-docx
+python -m spacy download en_core_web_sm
+
