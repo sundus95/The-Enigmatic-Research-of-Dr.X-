@@ -71,19 +71,26 @@ Section 6: Finding the Main Ideas
 This section focuses on summarizing the content of various document formats to extract their core ideas. The process leverages both abstractive and extractive summarization models to ensure a balance between fluency and factual accuracy. Summarization was applied to DOCX, PDF, and CSV files using the following notebooks:
 
 •	DOCX Input: Stats.docx
+
 Code: Summarization_docx.ipynb
 
 •	PDF Input: new-approaches-and-procedures-for-cancer-treatment.pdf
+
 Code: Summarization_pdf.ipynb
 
 •	CSV Input: excel_chunks_text.csv
+
 Code: Summarization_Performance Measurement_CSV.ipynb
 
 To accommodate different summarization goals, multiple models were used:
 •	PEGASUS: Fluent and human-like summaries — ideal for narrative documents, overviews, and news-style content. Used as the reference summary in evaluation.
+
 •	BART: Balanced and factual summaries — great for accurate overviews.
+
 •	T5: Flexible, multi-purpose model — useful for customized summarization tasks.
+
 •	TextRank & Luhn: Extractive models — best for fact-focused summarization by selecting key sentences.
+
 •	SpaCy (Custom): Fast, keyword-driven extraction — used for lightweight summarization.
 
 Note:
@@ -129,8 +136,11 @@ Code: Summarization_Performance Measurement_CSV.ipynb
 In this section, I measured the performance of six summarization models—BART, T5, TextRank, Luhn, and SpaCy (Custom), and PEGASUS —using the input file excel_chunks_text.csv. The goal was to evaluate their efficiency in processing tokens and generating summaries.
 
 The following metrics were recorded:
+
 •	Total tokens processed
+
 •	Time taken (in seconds)
+
 •	Processing speed (tokens per second)
 
 From a performance standpoint, extractive models like TextRank, Luhn, and SpaCy significantly outperformed abstractive models such as PEGASUS, T5, and BART in terms of processing speed. For example, Luhn handled over 69,000 tokens per second, making it the fastest, followed closely by TextRank. In contrast, PEGASUS, despite its high-quality, human-like output, processed tokens at a much slower rate (86.76 tokens/sec) due to its heavy computation.
