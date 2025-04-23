@@ -83,6 +83,7 @@ Code: Summarization_pdf.ipynb
 Code: Summarization_Performance Measurement_CSV.ipynb
 
 To accommodate different summarization goals, multiple models were used:
+
 •	PEGASUS: Fluent and human-like summaries — ideal for narrative documents, overviews, and news-style content. Used as the reference summary in evaluation.
 
 •	BART: Balanced and factual summaries — great for accurate overviews.
