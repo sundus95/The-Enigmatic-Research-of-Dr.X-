@@ -104,28 +104,43 @@ Code: Summarization_Performance Measurement_CSV.ipynb
 To evaluate the performance of different summarization models, I used the PEGASUS-generated summaries as reference (since I don’t have human reference summary) and computed ROUGE scores (ROUGE-1, ROUGE-2, and ROUGE-L) for BART, T5, TextRank, Luhn, and SpaCy-based summaries as shown below: 
 
 ROUGE Scores PEGASUS with BART:
+
 rouge1: Precision: 0.1860, Recall: 0.0471, F1: 0.0751
+
 rouge2: Precision: 0.0000, Recall: 0.0000, F1: 0.0000
+
 rougeL: Precision: 0.1860, Recall: 0.0471, F1: 0.0751
 
 ROUGE Scores PEGASUS with T5:
+
 rouge1: Precision: 0.0076, Recall: 0.0118, F1: 0.0093
+
 rouge2: Precision: 0.0038, Recall: 0.0059, F1: 0.0047
+
 rougeL: Precision: 0.0076, Recall: 0.0118, F1: 0.0093
 
 ROUGE Scores PEGASUS with TextRank:
+
 rouge1: Precision: 0.0089, Recall: 0.1647, F1: 0.0169
+
 rouge2: Precision: 0.0006, Recall: 0.0118, F1: 0.0012
+
 rougeL: Precision: 0.0057, Recall: 0.1059, F1: 0.0109
 
 ROUGE Scores PEGASUS with Luhn:
+
 rouge1: Precision: 0.0089, Recall: 0.1647, F1: 0.0169
+
 rouge2: Precision: 0.0006, Recall: 0.0118, F1: 0.0012
+
 rougeL: Precision: 0.0057, Recall: 0.1059, F1: 0.0109
 
 ROUGE Scores PEGASUS with SpaCy (Custom):
+
 rouge1: Precision: 0.0090, Recall: 0.1647, F1: 0.0170
+
 rouge2: Precision: 0.0006, Recall: 0.0118, F1: 0.0012
+
 rougeL: Precision: 0.0051, Recall: 0.0941, F1: 0.0097
 
 Overall, the ROUGE score evaluation using PEGASUS as the reference highlights significant differences in summarization quality across the models. BART outperformed the others in terms of ROUGE-1 and ROUGE-L precision and F1-scores, indicating a better overlap with PEGASUS summaries at the unigram and longest common subsequence levels. However, its ROUGE-2 score was zero, suggesting that it failed to capture meaningful bigram-level coherence. T5 produced notably low scores across all metrics, reflecting limited content overlap with PEGASUS. The extractive models—TextRank, Luhn, and SpaCy (Custom)—showed very similar patterns, achieving higher recall than precision but overall low F1-scores. This suggests they extracted some relevant content but lacked fluency and completeness when compared to PEGASUS. Despite their low scores, these models may still offer value in quick, fact-based summarization where completeness is less critical. The findings reinforce PEGASUS’s strength in generating human-like, cohesive summaries and highlight the trade-offs between abstractive and extractive summarization approaches. It is also important to note that if a human-written reference summary were used instead of PEGASUS, the evaluation results might differ, potentially favoring more factual or concise extractive summaries.
@@ -134,6 +149,7 @@ Overall, the ROUGE score evaluation using PEGASUS as the reference highlights si
 Section 7: Performance Measurement (Summarization) 
 
 Results of CSV Input: excel_chunks_text.csv
+
 Code: Summarization_Performance Measurement_CSV.ipynb
 
 In this section, I measured the performance of six summarization models—BART, T5, TextRank, Luhn, and SpaCy (Custom), and PEGASUS —using the input file excel_chunks_text.csv. The goal was to evaluate their efficiency in processing tokens and generating summaries.
