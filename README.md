@@ -13,7 +13,9 @@ This section focuses on transforming the processed text data into a searchable v
 The notebook loads and prepares the data from the Excel file, generates embeddings using the Nomic embedding model, and stores them in a FAISS vector index. Metadata associated with each chunk (e.g., source, page number, and chunk number) was stored separately in a pickle file for easy reference and retrieval.
 
 The main outputs of this step include:
+
 •	vector_index.faiss: The FAISS-based vector database of chunk embeddings.
+
 •	vector_metadata.pkl: A pickle file containing metadata linked to the index positions in the vector database.
 
 Section 4: Creating a RAG Q&A System
