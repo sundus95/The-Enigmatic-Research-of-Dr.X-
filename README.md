@@ -96,7 +96,9 @@ To accommodate different summarization goals, multiple models were used:
 
 Note:
 gensim was initially tested for extractive summarization but was not used due to version conflicts and unresolved dependency issues.
+
 Results of CSV Input: excel_chunks_text.csv
+
 Code: Summarization_Performance Measurement_CSV.ipynb
 
 To evaluate the performance of different summarization models, I used the PEGASUS-generated summaries as reference (since I don’t have human reference summary) and computed ROUGE scores (ROUGE-1, ROUGE-2, and ROUGE-L) for BART, T5, TextRank, Luhn, and SpaCy-based summaries as shown below: 
