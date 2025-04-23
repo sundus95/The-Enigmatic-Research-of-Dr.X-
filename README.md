@@ -41,20 +41,29 @@ Section 5: Translating the Publications
 This section focuses on translating extracted content from the publications into Arabic. The translation process was implemented using the Translation.ipynb notebook, and applied to documents in PDF, DOCX, and CSV formats.
 
 Two translation strategies were explored:
+
 •	Chunk-based translation: Initially translating entire chunks to preserve context.
+
 •	Sentence-based translation: Breaking content into sentences for improved fluency and translation accuracy.
 
 PDF Files: Worked 
+
 Input: new-approaches-and-procedures-for-cancer-treatment.pdf
+
 •	Chunk-based Output: translated_ar.txt
+
 •	Sentence-based Output: translated_document_full.txt
 
 DOCX File: Worked
+
 Input: Stats.docx
+
 •	Sentence-based Output: Stats_translated.docx
 
 CSV File: Didn’t work ☹ 
+
 Input: excel_chunks_text.csv
+
 •	Sentence-based Output (Selective Translation): excel_chunks_text_translated_selective.csv
 
 Section 6: Finding the Main Ideas
