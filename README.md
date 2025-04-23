@@ -1,8 +1,10 @@
 # The-Enigmatic-Research-of-Dr.X-
 Section 1: Reading the Publications
+
 The first stage of the project involved collecting and organizing various publications provided in the “DR. X Files” folder. This folder contained multiple file types—PDF, DOCX, and CSV/XLSX—each requiring a different approach for content extraction. To efficiently handle these formats, three dedicated Jupyter notebooks were created: Processing PDF file.ipynb, Processing DOCX file.ipynb, and Processing XLSX file.ipynb. Each notebook is designed to read the files, extract the textual content, and prepare the documents for downstream tasks like text chunking and analysis.
 
 Section 2: Breaking Down the Publications
+
 Once the documents were read successfully, the next task was to break down the extracted text into manageable segments. The outputs from this process were saved in separate CSV files: docx_chunks_text.csv, excel_chunks_text.csv, and pdf_chunks_text.csv, which were later merged into a single Excel file named ThreeFilesMerged.xlsx for unified access and analysis. Each CSV file contains a column with the chunked text data.
 
 Section 3: Building a Vector Database
